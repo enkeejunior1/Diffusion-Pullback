@@ -30,13 +30,13 @@ if __name__ == "__main__":
     if args.run_edit_local_encoder_pullback_zt:
         edit.run_edit_local_encoder_pullback_zt(
             idx=args.sample_idx, op='mid', block_idx=0,
-            vis_num=8, vis_num_pc=3, pca_rank=5, edit_prompt=args.edit_prompt,
+            vis_num=4, vis_num_pc=2, pca_rank=2, edit_prompt=args.edit_prompt,
         )
 
     if args.run_edit_parallel_transport:
         edit.run_edit_parallel_transport(
             sample_idx_0=args.sample_idx_0, sample_idx_1=args.sample_idx_1, op='mid', block_idx=0,
-            vis_num=8, vis_num_pc=3, pca_rank=50, 
+            vis_num=4, vis_num_pc=2, pca_rank=50, 
         )
 
     ###########################################

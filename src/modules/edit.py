@@ -492,7 +492,7 @@ class EditStableDiffusion(object):
         # predict the noise residual
         et = self.unet(
             torch.cat([zt, zt_edit], dim=0), t, 
-            encoder_hidden_states=self.edit_prompt_emb.repeat(2, 1, 1) if use_edit_prompt else self.for_prompt_emb.repeat(2, 1, 1),
+            encoder_hidden_states=self.edit_prompt_emb.repeat(2, 1, 1)
             # cross_attention_kwargs=None,
         ).sample
 

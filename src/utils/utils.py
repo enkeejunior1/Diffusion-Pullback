@@ -758,7 +758,7 @@ def local_encoder_pullback_zt(
         v_prev = v.detach().cpu().clone()
         
         u = []
-        if v.size(0) != 1:
+        if v.size(0) // chunk_size != 0:
             v_buffer = list(v.chunk(v.size(0) // chunk_size))
         else:
             v_buffer = [v]

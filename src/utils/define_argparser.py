@@ -19,41 +19,41 @@ def parse_args():
     # default setting 
     parser.add_argument('--sh_file_name',   type=str,   default='',      required=False, help="for logging")
     parser.add_argument('--device',         type=str,   default='',      required=False, help="'cuda', 'cpu'")
-    parser.add_argument('--dtype',          type=str,   default='fp16',  required=False, help="'fp32', 'fp16'")
+    parser.add_argument('--dtype',          type=str,   default='fp32',  required=False, help="'fp32', 'fp16'")
     parser.add_argument('--seed',           type=int,   default=0,       required=False, help='Random seed')
     parser.add_argument('--result_folder',  type=str,   default='./runs/', help='Path for saving running related data.')
     
     # model, dataset setting
-    parser.add_argument('--model_name',     type=str,   default='',   required=False)
-    parser.add_argument('--dataset_name',   type=str,   default='',   required=False)
-    parser.add_argument('--num_imgs',       type=int,   default=100,  required=False)
-    parser.add_argument('--image_size',     type=int,   default=256,  required=False)
-    parser.add_argument('--c_in',           type=int,   default=3,    required=False)
-    parser.add_argument('--sample_idx',     type=int,   default=0,    required=False)
+    parser.add_argument('--model_name',     type=str,   default='',     required=False)
+    parser.add_argument('--dataset_name',   type=str,   default='',     required=False)
+    parser.add_argument('--num_imgs',       type=int,   default=100,    required=False)
+    parser.add_argument('--image_size',     type=int,   default=256,    required=False)
+    parser.add_argument('--c_in',           type=int,   default=3,      required=False)
+    parser.add_argument('--sample_idx',     type=int,   default=0,      required=False)
 
     # args (prompt)
-    parser.add_argument('--for_prompt',     type=str,   default='default', required=False)
-    parser.add_argument('--inv_prompt',     type=str,   default='default', required=False)
-    parser.add_argument('--neg_prompt',     type=str,   default='default', required=False)
+    parser.add_argument('--for_prompt',     type=str,   default='',     required=False)
+    parser.add_argument('--inv_prompt',     type=str,   default='',     required=False)
+    parser.add_argument('--neg_prompt',     type=str,   default='',     required=False)
     
     # args (diffusion schedule)
-    parser.add_argument('--for_steps',      type=int,   default=40, required=False)
-    parser.add_argument('--inv_steps',      type=int,   default=40, required=False)
-    parser.add_argument('--performance_boosting_t',     type=float,    default=0.0,    required=False)
-    parser.add_argument('--use_yh_custom_scheduler',    type=str2bool, default='True', required=False)
+    parser.add_argument('--for_steps',      type=int,   default=100,    required=False)
+    parser.add_argument('--inv_steps',      type=int,   default=100,    required=False)
+    parser.add_argument('--performance_boosting_t',     type=float,     default=0.0,    required=False)
+    parser.add_argument('--use_yh_custom_scheduler',    type=str2bool,  default='True', required=False, help='Use custom scheduler for better inversion quality')
 
     # args (guidance)
     parser.add_argument('--guidance_scale', type=float, default=0,  required=False)
     
     # args (h space edit)
-    parser.add_argument('--edit_prompt',     type=str,  default='default',      required=False)
+    parser.add_argument('--edit_prompt',     type=str,  default='',      required=False)
     # parser.add_argument('--h_space_guidance_scale',     type=float, default=0,  required=False)
 
     parser.add_argument('--edit_xt',        type=str,   default='default',      required=False, help="'parallel-x' or 'parallel-h'")
     # parser.add_argument('--edit_ht',        type=str,   default='default',      required=False, help="'multiple-t' or 'single-t'")
 
-    parser.add_argument('--after_res',      type=str2bool,  default='False',    required=False)
-    parser.add_argument('--after_sa',       type=str2bool,  default='False',    required=False)
+    # parser.add_argument('--after_res',      type=str2bool,  default='False',    required=False)
+    # parser.add_argument('--after_sa',       type=str2bool,  default='False',    required=False)
 
     # parser.add_argument('--use_dynamic_thresholding',   type=str2bool,  default='False',    required=False)
     # parser.add_argument('--dynamic_thresholding_q',     type=float,     default=0.8,        required=False)
@@ -67,10 +67,10 @@ def parse_args():
     # parser.add_argument('--use_match_prompt',           type=str2bool,  default='False',    required=False)
 
     parser.add_argument('--use_x_space_guidance',                       type=str2bool,  default='False',    required=False)
-    parser.add_argument('--x_space_guidance_edit_step',                 type=float,     default=0,          required=False)
+    parser.add_argument('--x_space_guidance_edit_step',                 type=float,     default=1,          required=False)
     parser.add_argument('--x_space_guidance_scale',                     type=float,     default=0,          required=False)
     parser.add_argument('--x_space_guidance_num_step',                  type=int,       default=0,          required=False)
-    parser.add_argument('--x_space_guidance_use_edit_prompt',           type=str2bool,  default='False',    required=False)
+    parser.add_argument('--x_space_guidance_use_edit_prompt',           type=str2bool,  default='True',     required=False)
 
     # parser.add_argument('--use_delta_denoising_score_reg',              type=str2bool,  default='False',    required=False)
     # parser.add_argument('--delta_denoising_score_reg_step',             type=float,     default=0,          required=False)
