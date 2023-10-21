@@ -1,0 +1,19 @@
+# TODO : need to check SDEdit parameters
+config:
+    diffusion:
+        beta_schedule : "linear"
+        beta_start    : 0.0001
+        beta_end      : 0.02
+        num_diffusion_timesteps : 1000
+
+    model:
+        out_ch      : 3
+        in_channels : 3
+        ch : 128
+        ch_mult : [1, 1, 2, 2, 4, 4]
+        num_res_blocks   : 2
+        attn_resolutions : [16, ]
+        dropout : 0.0
+        resamp_with_conv : True
+        model_var_type   : "fixedsmall"
+        # type : "simple"
