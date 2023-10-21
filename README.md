@@ -8,7 +8,7 @@ unsupervised editing
 ![sd_without_prompt](./figures/x0_gen-Edit_zt-Examples_2-edit_0.7T-mid-block_0-pc_000_pos-edit_prompt_.png)
 
 weekly-supervised editing (text-conditioned)
-![sd_with_prompt](./figures/x0_gen-Edit_zt-Examples_5-edit_0.7T-mid-block_0-pc_001_pos-edit_prompt_sitting dog.png)
+![sd_with_prompt](./figures/x0_gen-Edit_zt-Examples_5-edit_0.7T-mid-block_0-pc_001_pos-edit_prompt_sitting_dog.png)
 
 ## Environment
 ```
