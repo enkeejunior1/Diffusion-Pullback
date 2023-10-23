@@ -1,12 +1,12 @@
 torch==2.1.0
 torchvision==0.16.0
-tqdm==4.65.0
+tqdm #==4.65.0
 diffusers==0.11.0
-einops==0.7.0
-matplotlib==3.7.1
-numpy==1.24.3
-accelerate==0.23.0
-transformers==4.34.1
+einops#==0.7.0
+matplotlib#==3.7.1
+numpy#==1.24.3
+accelerate#==0.23.0
+transformers#==4.34.1
 xformers
 # mpi4py==3.1.5
 # Pillow==9.4.0
