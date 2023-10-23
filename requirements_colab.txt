@@ -1,0 +1,9 @@
+torch==2.1.0
+torchvision==0.16.0
+diffusers==0.11.0
+tqdm
+einops
+matplot
+accelerate
+transformers
+xformers
