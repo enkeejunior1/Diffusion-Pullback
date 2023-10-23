@@ -33,7 +33,7 @@ bash scripts/main_celeba_hf_local_encoder_pullback.sh
 
 If you want to experiment with a new image, you can do the following: 1) Insert the desired image into "datasets/examples", and 2) adjust the "sample_idx" accordingly.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/enkeejunior1/Diffusion-Pullback/example-code.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/enkeejunior1/blob/Diffusion-Pullback/example-code.ipynb)
 
 ```
 cd src
