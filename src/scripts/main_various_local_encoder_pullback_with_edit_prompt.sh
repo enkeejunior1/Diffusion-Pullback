@@ -12,7 +12,7 @@ for t in 0.7 0.6
                 --dataset_name                          Examples                                    \
                 --edit_prompt                           "$edit_prompt"                              \
                 --x_space_guidance_scale                1                                           \
-                --x_space_guidance_num_step             16                                          \
+                --x_space_guidance_num_step             64                                          \
                 --edit_t                                $t                                          \
                 --run_edit_local_encoder_pullback_zt    True                                        \
                 --note                                  "with_prompt"
